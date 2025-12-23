@@ -15,6 +15,10 @@ title: Sunil's website
 # Your name to show in the footer
 author: Sunil Varma
 
+# Base URL of site (leave blank for root domain, use /repo-name for GitHub Pages)
+url: "https://skv08.github.io"
+baseurl: "/mysunjekyll"
+
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
