@@ -1,5 +1,281 @@
 ---
 layout: home
-title: My website
-subtitle: Consider this as the first Jekyll Website. Will publish many more in coming days.
+title: Welcome to My Digital Space
+subtitle: Exploring Web Development, DevSecOps, and Technology
 ---
+
+<div class="intro-section">
+  <div class="intro-card">
+    <h2>👋 Hello, I'm Sunil Varma</h2>
+    <p>
+      Welcome to my personal website! I'm passionate about building secure, scalable web applications
+      and exploring the intersection of development and security through DevSecOps practices.
+    </p>
+    <p>
+      This space is where I share my learning journey, projects, and insights from the ever-evolving
+      world of technology.
+    </p>
+  </div>
+</div>
+
+<div class="features-grid">
+  <div class="feature-card">
+    <div class="feature-icon">📝</div>
+    <h3>Blog Posts</h3>
+    <p>Technical articles, tutorials, and thoughts on web development and DevSecOps practices.</p>
+    <a href="{{ '/posts' | relative_url }}" class="feature-link">Read Articles →</a>
+  </div>
+
+  <div class="feature-card">
+    <div class="feature-icon">🚀</div>
+    <h3>Projects</h3>
+    <p>Explore my latest work, experiments, and contributions to the tech community.</p>
+    <a href="{{ '/projects' | relative_url }}" class="feature-link">View Projects →</a>
+  </div>
+
+  <div class="feature-card">
+    <div class="feature-icon">💡</div>
+    <h3>About Me</h3>
+    <p>Learn more about my background, interests, and what drives my passion for technology.</p>
+    <a href="{{ '/aboutme' | relative_url }}" class="feature-link">Learn More →</a>
+  </div>
+
+  <div class="feature-card">
+    <div class="feature-icon">📬</div>
+    <h3>Get In Touch</h3>
+    <p>Interested in collaborating or just want to connect? Let's talk!</p>
+    <a href="{{ '/contact' | relative_url }}" class="feature-link">Contact Me →</a>
+  </div>
+</div>
+
+<div class="recent-posts-section">
+  <h2>Latest Posts</h2>
+  <p class="section-subtitle">Check out my most recent articles and tutorials</p>
+</div>
+
+<div class="topics-section">
+  <h2>What I Write About</h2>
+  <div class="topics-grid">
+    <div class="topic-tag">Web Development</div>
+    <div class="topic-tag">DevSecOps</div>
+    <div class="topic-tag">Security</div>
+    <div class="topic-tag">CI/CD</div>
+    <div class="topic-tag">Jekyll</div>
+    <div class="topic-tag">Cloud Computing</div>
+    <div class="topic-tag">Best Practices</div>
+    <div class="topic-tag">Automation</div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <h2>Stay Updated</h2>
+  <p>
+    New to the site? Start by checking out the <a href="{{ '/aboutme' | relative_url }}">About Me</a> page
+    or dive into the latest <a href="{{ '/posts' | relative_url }}">blog posts</a>.
+  </p>
+  <p>
+    <a href="{{ site.social-network-links.github }}" target="_blank" class="cta-button">Follow on GitHub</a>
+  </p>
+</div>
+
+<style>
+.intro-section {
+  margin: 2rem 0 3rem 0;
+}
+
+.intro-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.intro-card h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: white;
+}
+
+.intro-card p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: rgba(255,255,255,0.95);
+}
+
+.intro-card p:last-child {
+  margin-bottom: 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid #3498DB;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.feature-card h3 {
+  margin: 0.5rem 0;
+  color: #2C3E50;
+  font-size: 1.4rem;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+.feature-link {
+  display: inline-block;
+  color: #3498DB;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.feature-link:hover {
+  color: #E74C3C;
+  text-decoration: none;
+}
+
+.recent-posts-section {
+  margin: 4rem 0 2rem 0;
+  text-align: center;
+}
+
+.recent-posts-section h2 {
+  color: #2C3E50;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: #7F8C8D;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.topics-section {
+  margin: 4rem 0;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.topics-section h2 {
+  text-align: center;
+  color: #2C3E50;
+  margin-bottom: 1.5rem;
+}
+
+.topics-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.topic-tag {
+  background: linear-gradient(135deg, #3498DB, #2980B9);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: transform 0.3s;
+}
+
+.topic-tag:hover {
+  transform: scale(1.05);
+}
+
+.cta-section {
+  text-align: center;
+  margin: 4rem 0;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #E74C3C, #C0392B);
+  color: white;
+  border-radius: 10px;
+}
+
+.cta-section h2 {
+  color: white;
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 1rem 0;
+  color: rgba(255,255,255,0.95);
+}
+
+.cta-section a:not(.cta-button) {
+  color: #FFE66D;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  background: white;
+  color: #E74C3C;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  color: #C0392B;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .intro-card {
+    padding: 1.5rem;
+  }
+
+  .intro-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topics-grid {
+    justify-content: flex-start;
+  }
+}
+</style>
