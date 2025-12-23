@@ -1,0 +1,162 @@
+---
+layout: page
+title: Blog Posts
+subtitle: Articles, tutorials, and thoughts on technology
+---
+
+<div class="posts-list">
+  {% for post in site.posts %}
+  <article class="post-preview">
+    <a href="{{ post.url | relative_url }}">
+      <h2 class="post-title">{{ post.title }}</h2>
+    </a>
+
+    {% if post.subtitle %}
+    <h3 class="post-subtitle">
+      {{ post.subtitle }}
+    </h3>
+    {% endif %}
+
+    <p class="post-meta">
+      Posted on {{ post.date | date: "%B %-d, %Y" }}
+      {% if post.author %}
+      by {{ post.author }}
+      {% endif %}
+    </p>
+
+    <div class="post-entry">
+      {% if post.excerpt %}
+        {{ post.excerpt | strip_html | xml_escape | truncatewords: 50 }}
+      {% else %}
+        {{ post.content | strip_html | xml_escape | truncatewords: 50 }}
+      {% endif %}
+      <a href="{{ post.url | relative_url }}" class="post-read-more">Read More &rarr;</a>
+    </div>
+
+    {% if post.tags.size > 0 %}
+    <div class="blog-tags">
+      Tags:
+      {% for tag in post.tags %}
+      <a href="{{ '/tags' | relative_url }}#{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </article>
+  {% endfor %}
+</div>
+
+{% if site.posts.size == 0 %}
+<div class="no-posts">
+  <p>No blog posts yet. Check back soon!</p>
+</div>
+{% endif %}
+
+<style>
+.posts-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.post-preview {
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  border-left: 4px solid #3498DB;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-preview:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.post-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #2C3E50;
+  font-size: 1.8rem;
+}
+
+.post-title:hover {
+  color: #3498DB;
+}
+
+.post-subtitle {
+  margin: 0.5rem 0;
+  color: #7F8C8D;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.post-meta {
+  color: #95A5A6;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+.post-entry {
+  margin: 1.5rem 0;
+  line-height: 1.8;
+  color: #555;
+}
+
+.post-read-more {
+  color: #3498DB;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.post-read-more:hover {
+  color: #E74C3C;
+  text-decoration: none;
+}
+
+.blog-tags {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ECF0F1;
+  font-size: 0.9rem;
+  color: #7F8C8D;
+}
+
+.blog-tags a {
+  display: inline-block;
+  background: #ECF0F1;
+  color: #2C3E50;
+  padding: 0.3rem 0.8rem;
+  margin: 0.2rem;
+  border-radius: 15px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background 0.3s;
+}
+
+.blog-tags a:hover {
+  background: #3498DB;
+  color: white;
+  text-decoration: none;
+}
+
+.no-posts {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 10px;
+  color: #7F8C8D;
+}
+
+@media (max-width: 768px) {
+  .post-preview {
+    padding: 1.5rem;
+  }
+
+  .post-title {
+    font-size: 1.5rem;
+  }
+}
+</style>
