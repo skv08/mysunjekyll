@@ -21,10 +21,11 @@ author: Sunil Varma
 
 navbar-links:
   About Me: "aboutme"
+  Projects: "projects"
+  Contact: "contact"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://skv08.github.io"
 
 ################
 # --- Logo --- #
@@ -171,6 +172,11 @@ footer-hover-col: "#0085A1"
 #################################
 
 # Fill in your Google Analytics tag ID (or "Measurement ID") to track your website usage
+# INSTRUCTIONS TO ENABLE:
+# 1. Sign up for Google Analytics at https://analytics.google.com/
+# 2. Create a new property for your website
+# 3. Get your Measurement ID (format: G-XXXXXXXXXX)
+# 4. Uncomment the line below and replace with your actual Measurement ID
 #gtag: "G-XXXXXXXXXX"
 
 # Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
@@ -209,10 +215,17 @@ footer-hover-col: "#0085A1"
 # "repository" (make sure the repository is public), (2) Enable Issues in your repository,
 # (3) Install the Utterances app in your repository https://github.com/apps/utterances
 # See more details about the parameters below at https://utteranc.es/
+#
+# INSTRUCTIONS TO ENABLE:
+# 1. Go to your GitHub repository settings
+# 2. Enable "Issues" under Features
+# 3. Visit https://github.com/apps/utterances and install it for your repository
+# 4. Uncomment the lines below and add your repository name (format: username/repo-name)
+#
 #utterances:
-#  repository: # GitHub username/repository eg. "daattali/beautiful-jekyll"
+#  repository: "skv08/your-repo-name"  # Replace with your actual repository name
 #  issue-term: title   # Mapping between blog posts and GitHub issues
-#  theme: github-light # Utterances theme
+#  theme: github-light # Utterances theme (options: github-light, github-dark, github-dark-orange, etc.)
 #  label: blog-comments # Label that will be assigned to GitHub Issues created by Utterances
 
 # To use Staticman comments, uncomment the following section. You may leave the reCaptcha
