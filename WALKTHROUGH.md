@@ -831,7 +831,7 @@ Error: Could not locate the included file 'filename.html'
 
 #### Issue 4: Liquid Exception
 - Check Liquid syntax in templates
-- Ensure proper `{% %}` and `{{ }}` usage
+- Ensure proper {% raw %}`{% %}` and `{{ }}`{% endraw %} usage
 
 #### Issue 5: GitHub Pages Not Updating
 - Check repository Settings → Pages
